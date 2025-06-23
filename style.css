@@ -160,3 +160,32 @@ footer {
     font-size: 18px;
   }
 }
+/* Estilo para modo escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode nav a {
+  color: #a0a0a0;
+}
+
+body.dark-mode article {
+  background-color: #1e1e1e;
+  box-shadow: none;
+}
+
+body.dark-mode blockquote {
+  background-color: #2a2a2a;
+  border-left-color: #3f9142;
+}
+
+body.dark-mode footer {
+  background-color: #121212;
+  color: #e0e0e0;
+}
