@@ -1,0 +1,3 @@
+function mostrarAlerta() {
+  alert("Obrigado por confiar no AgroFácil! Envie sua foto e receba sua resposta em até 48h.");
+}
