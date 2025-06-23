@@ -1,25 +1,27 @@
 function mostrarAlerta() {
   alert("Obrigado por confiar no CampoFácil! Envie sua foto e receba sua resposta em até 48h.");
 }
-// Controle dos botões de acessibilidade
-const btnAumentarFonte = document.getElementById('btn-aumentar-fonte');
-const btnResetarFonte = document.getElementById('btn-resetar-fonte');
-const btnToggleDark = document.getElementById('btn-toggle-dark');
-const body = document.body;
 
-// Pega o tamanho inicial da fonte
-let tamanhoFonteAtual = parseFloat(getComputedStyle(body).fontSize) || 18;
+document.addEventListener('DOMContentLoaded', () => {
+  const btnAumentarFonte = document.getElementById('btn-aumentar-fonte');
+  const btnResetarFonte = document.getElementById('btn-resetar-fonte');
+  const btnToggleDark = document.getElementById('btn-toggle-dark');
+  const body = document.body;
 
-btnAumentarFonte?.addEventListener('click', () => {
-  tamanhoFonteAtual += 2;
-  body.style.fontSize = tamanhoFonteAtual + 'px';
-});
+  // Pega o tamanho inicial da fonte (em px)
+  let tamanhoFonteAtual = parseFloat(getComputedStyle(body).fontSize) || 18;
 
-btnResetarFonte?.addEventListener('click', () => {
-  tamanhoFonteAtual = 18; // valor padrão do CSS
-  body.style.fontSize = tamanhoFonteAtual + 'px';
-});
+  btnAumentarFonte?.addEventListener('click', () => {
+    tamanhoFonteAtual += 2;
+    body.style.fontSize = tamanhoFonteAtual + 'px';
+  });
 
-btnToggleDark?.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
+  btnResetarFonte?.addEventListener('click', () => {
+    tamanhoFonteAtual = 18; // valor padrão do CSS
+    body.style.fontSize = tamanhoFonteAtual + 'px';
+  });
+
+  btnToggleDark?.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+  });
 });
